@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/snake-icon.svg"
+      type="image/x-icon"
+    />
+    <title>Snake-game</title>
+  </head>
+  <body>
+    <div class="before-start" id="button-display">
+      <p class="before-start-text">Ready to play?</p>
+      <div class="before-start-buttons">
+        <button id="button-yes" class="before-start-button">Yes</button>
+        <button id="button-no" class="before-start-button">No</button>
+      </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <p class="score-title">Score</p>
+      <div id="score-board" class="score-board">0</div>
+      <canvas width="640" height="400" class="canvas" id="canvas"></canvas>
+      <div class="game-result-wrapper" id="dark-background">
+        <div class="game-result-board-wrapper" id="game-result">
+          <div class="game-result-board">
+            <p class="game-result-info">
+              Your score is: <span id="score"></span>
+            </p>
+            <button class="button-try-again" id="try-again">Try again?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/icons/red_point.svg" alt="" style="display: none" id="red-point"/>
+    <script type="module" src="src/scripts/animationSetup.js" defer></script>
+    <script type="module" src="src/scripts/snake.js" defer></script>
+    <script type="module" src="src/scripts/game.js" defer></script>
+    <script type="module" src="src/scripts/gameLaunch.js" defer></script>
+    <script type="module" src="src/scripts/gameRestart.js" defer></script>
+    <script type="module" src="src/scripts/buttons-handler.js" defer></script>
+  </body>
+</html>

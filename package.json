@@ -1,0 +1,25 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preview": "vite preview",
+    "build": "vite build --base=./",
+    "serve": "vite --host=localhost --port=8080 ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duffdef/snake-game.git"
+  },
+  "author": "Aliaksandr Huzarevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duffdef/snake-game/issues"
+  },
+  "homepage": "https://github.com/duffdef/snake-game#readme",
+  "devDependencies": {
+    "vite": "^4.3.5"
+  }
+}
