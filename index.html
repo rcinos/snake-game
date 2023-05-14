@@ -13,14 +13,29 @@
     <title>Snake-game</title>
   </head>
   <body>
-    <div class="before-start" id="button-display">
-      <p class="before-start-text">Ready to play?</p>
-      <div class="before-start-buttons">
+    <div class="before-start-wrapper" id="game-settings">
+      <div class="before-start" id="button-display">
+        <p class="before-start-text">Ready to play?</p>
         <button id="button-yes" class="before-start-button">Yes</button>
-        <button id="button-no" class="before-start-button">No</button>
+      </div>
+      <div class="difficulty-level" id="difficulty-level">
+        <p class="difficulty-level-title">Choose level difficulty</p>
+        <div class="difficulty-level-block">
+          <div class="difficulty-level-easy difficulty-level-element">
+            <button id="easy-level">Easy</button>
+          </div>
+          <div class="difficulty-level-medium difficulty-level-element">
+            <button id="medium-level">Medium</button>
+          </div>
+          <div class="difficulty-level-hard difficulty-level-element">
+            <button id="hard-level">Hard</button>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="wrapper" id="wrapper">
+      <button class="pause" id="pause-button">Pause</button>
       <p class="score-title">Score</p>
       <div id="score-board" class="score-board">0</div>
       <canvas width="640" height="400" class="canvas" id="canvas"></canvas>
@@ -35,8 +50,13 @@
         </div>
       </div>
     </div>
-    <img src="./assets/icons/red_point.svg" alt="" style="display: none" id="red-point"/>
-    <script type="module" src="src/scripts/animationSetup.js" defer></script>
+    <img
+      src="./assets/icons/red_point.svg"
+      alt=""
+      style="display: none"
+      id="red-point"
+    />
+    <script type="module" src="src/scripts/gameSetup.js" defer></script>
     <script type="module" src="src/scripts/snake.js" defer></script>
     <script type="module" src="src/scripts/game.js" defer></script>
     <script type="module" src="src/scripts/gameLaunch.js" defer></script>

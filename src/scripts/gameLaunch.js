@@ -7,14 +7,17 @@ import {
   darkBackground,
   score,
   buttonTryAgain,
-} from "./animationSetup";
+  maxStep,
+  buttonPause,
+} from "./gameSetup";
 import { tryAgainHandler } from "./gameRestart";
+import { pauseHandler } from "./pauseHandler";
 
-export { startGame };
+export { startGame, animFrame };
 let step = 0;
-const maxStep = 10;
+let animFrame;
 function startGame() {
-  const animFrame = requestAnimationFrame(startGame);
+  animFrame = requestAnimationFrame(startGame);
   if (++step < maxStep) {
     return;
   }
@@ -32,7 +35,6 @@ function startGame() {
   }
   if (snake.hitsItself()) {
     gameFinish();
-    cancelAnimationFrame(animFrame);
   }
 }
 
@@ -41,4 +43,6 @@ function gameFinish() {
   score.innerHTML = `${game.score}`;
   buttonTryAgain.addEventListener("click", tryAgainHandler);
   document.removeEventListener("keydown", snake.movingControls.bind(snake));
+  buttonPause.removeEventListener("click", pauseHandler);
+  cancelAnimationFrame(animFrame);
 }

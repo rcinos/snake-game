@@ -1,4 +1,4 @@
-import { ctx, grid, height, width } from "./animationSetup";
+import { ctx, grid, height, width } from "./gameSetup";
 
 export { game };
 

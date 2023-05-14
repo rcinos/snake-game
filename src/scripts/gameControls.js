@@ -1,4 +1,4 @@
-import { canvas } from "./animationSetup";
+import { canvas } from "./gameSetup";
 
 export { GameControls, gameControls };
 class GameControls {

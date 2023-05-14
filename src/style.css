@@ -1,6 +1,7 @@
 :root {
   font-size: calc(0.6vw + 0.8em);
   box-sizing: border-box;
+  --top-indent: 3em;
 }
 
 *,
@@ -13,14 +14,27 @@ p {
   margin: 0;
 }
 
+button {
+  padding: 1em 2em;
+  background-color: #a00034;
+  color: #161618;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 body {
   max-width: 1080px;
   margin: 0 auto;
   background-color: #353336;
+  font-family: Roboto, sans-serif;
 }
 
-.before-start {
-  display: block;
+.before-start-wrapper {
+  display: flex;
+  align-items: center;
   box-sizing: content-box;
   position: absolute;
   top: 30%;
@@ -32,6 +46,15 @@ body {
   padding: 2em 4em;
 }
 
+.before-start-wrapper.toggled {
+  display: none;
+}
+
+.before-start {
+  display: flex;
+  flex-direction: column;
+}
+
 .before-start.toggled {
   display: none;
 }
@@ -39,47 +62,57 @@ body {
 .before-start-text {
   font-size: 1.2rem;
   color: #a00034;
-  font-family: Roboto, sans-serif;
-  text-align: center;
-}
-
-.before-start-buttons {
-  margin-top: 3em;
-  display: flex;
-  justify-content: space-between;
-}
-
-.before-start-buttons > * + * {
-  margin-left: 3em;
 }
 
 .before-start-button {
-  padding: 1em 2em;
-  background-color: #a00034;
-  font-size: 0.8rem;
-  color: #161618;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
+  margin-top: var(--top-indent);
+}
+
+.difficulty-level {
+  display: none;
+}
+
+.difficulty-level.toggled {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.difficulty-level-title {
+  color: #a00034;
+  font-size: 1.2rem;
+}
+
+.difficulty-level-block {
+  margin-top: var(--top-indent);
+  display: flex;
+}
+
+.difficulty-level-block > div + div {
+  margin-left: 1.5em;
 }
 
 .wrapper {
   display: none;
-  margin-top: 3em;
 }
 
 .wrapper.toggled {
+  margin-top: var(--top-indent);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pause {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .score-title {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 900;
-  font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
 .score-board {
@@ -92,7 +125,6 @@ body {
   justify-content: center;
   align-items: center;
   color: #a00034;
-  font-family: Roboto, sans-serif;
 }
 
 .canvas {
@@ -137,19 +169,10 @@ body {
 
 .game-result-info {
   color: #a00034;
-  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   margin-top: 1em;
 }
 
 .button-try-again {
   margin-top: 3em;
-  font-size: 0.8rem;
-  background-color: #a00034;
-  color: #161618;
-  font-weight: bold;
-  padding: 1em 1.5em;
-  border-radius: 10px;
-  border: 0;
-  cursor: pointer;
 }
