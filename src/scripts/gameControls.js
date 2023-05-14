@@ -1,4 +1,4 @@
-import { canvas } from "./gameSetup";
+import { canvas } from "./gameSetup.js";
 
 export { GameControls, gameControls };
 class GameControls {

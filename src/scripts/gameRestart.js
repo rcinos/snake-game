@@ -1,8 +1,8 @@
-import { buttonTryAgain, darkBackground, scoreBoard } from "./gameSetup";
-import { snake } from "./snake";
-import { startGame } from "./gameLaunch";
-import { game } from "./game";
-import { pauseGame } from "./pauseHandler";
+import { buttonTryAgain, darkBackground, scoreBoard } from "./gameSetup.js";
+import { snake } from "./snake.js";
+import { game } from "./game.js";
+import { startGame } from "./gameLaunch.js";
+import { pauseGame } from "./pauseHandler.js";
 export { restartGame, tryAgainHandler };
 function restartGame() {
   darkBackground.classList.toggle("toggled");

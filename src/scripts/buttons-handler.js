@@ -1,10 +1,6 @@
-import { snake } from "./snake";
-import {
-  gameDifficultyHandler,
-  buttonDisplay,
-  buttonYes,
-  difficultyLevel,
-} from "./gameSetup";
+import { buttonDisplay, buttonYes, difficultyLevel } from "./gameSetup.js";
+import { snake } from "./snake.js";
+import { gameDifficultyHandler } from "./gameDifficultyHandler";
 
 const buttonYseHandler = () => {
   buttonDisplay.classList.toggle("toggled");

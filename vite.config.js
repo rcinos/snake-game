@@ -1,3 +1,5 @@
-export default {
-  base: "/snake-game",
-};
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  base: "./",
+});

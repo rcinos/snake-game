@@ -1,5 +1,5 @@
-import { buttonPause } from "./gameSetup";
-import { startGame, animFrame } from "./gameLaunch";
+import { buttonPause } from "./gameSetup.js";
+import { startGame, animFrame } from "./gameLaunch.js";
 export { pauseGame, pauseHandler };
 let paused = false;
 function pauseGame() {

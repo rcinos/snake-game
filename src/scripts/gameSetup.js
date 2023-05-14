@@ -1,6 +1,3 @@
-import { startGame } from "./gameLaunch";
-import {pauseGame} from "./pauseHandler";
-
 export {
   ctx,
   scoreBoard,
@@ -11,13 +8,12 @@ export {
   width,
   height,
   grid,
-  maxStep,
-  gameDifficultyHandler,
+  gameSettings,
   buttonYes,
   wrapper,
   buttonDisplay,
   difficultyLevel,
-    buttonPause
+  buttonPause,
 };
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -33,25 +29,4 @@ const buttonYes = document.getElementById("button-yes");
 const buttonDisplay = document.getElementById("button-display");
 const wrapper = document.getElementById("wrapper");
 const difficultyLevel = document.getElementById("difficulty-level");
-const buttonPause = document.getElementById("pause-button")
-
-let maxStep;
-
-function gameDifficultyHandler(event) {
-  switch (event.target.id) {
-    case "easy-level":
-      maxStep = 10;
-      break;
-    case "medium-level":
-      maxStep = 5;
-      break;
-    case "hard-level":
-      maxStep = 0;
-      break;
-  }
-  gameSettings.classList.toggle("toggled");
-  wrapper.classList.toggle("toggled");
-  difficultyLevel.removeEventListener("click", gameDifficultyHandler);
-  startGame();
-  pauseGame();
-}
+const buttonPause = document.getElementById("pause-button");

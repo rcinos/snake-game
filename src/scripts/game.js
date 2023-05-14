@@ -1,4 +1,4 @@
-import { ctx, grid, height, width } from "./gameSetup";
+import { ctx, grid, height, width } from "./gameSetup.js";
 
 export { game };
 

@@ -1,5 +1,3 @@
-import { snake } from "./snake";
-import { game } from "./game";
 import {
   ctx,
   scoreBoard,
@@ -7,11 +5,13 @@ import {
   darkBackground,
   score,
   buttonTryAgain,
-  maxStep,
   buttonPause,
 } from "./gameSetup";
-import { tryAgainHandler } from "./gameRestart";
-import { pauseHandler } from "./pauseHandler";
+import { snake } from "./snake.js";
+import { game } from "./game.js";
+import { pauseHandler } from "./pauseHandler.js";
+import { maxStep } from "./gameDifficultyHandler";
+import { tryAgainHandler } from "./gameRestart.js";
 
 export { startGame, animFrame };
 let step = 0;
