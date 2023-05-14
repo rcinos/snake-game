@@ -13,12 +13,12 @@
     <title>Snake-game</title>
   </head>
   <body>
-    <div class="before-start-wrapper" id="game-settings">
-      <div class="before-start" id="button-display">
+    <div class="before-start-wrapper hidden-after" id="game-settings">
+      <div class="before-start hidden-after" id="button-display">
         <p class="before-start-text">Ready to play?</p>
         <button id="button-yes" class="before-start-button">Yes</button>
       </div>
-      <div class="difficulty-level" id="difficulty-level">
+      <div class="difficulty-level hidden-before" id="difficulty-level">
         <p class="difficulty-level-title">Choose level difficulty</p>
         <div class="difficulty-level-block">
           <div class="difficulty-level-easy difficulty-level-element">
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="wrapper" id="wrapper">
+    <div class="wrapper hidden-before" id="wrapper">
       <button class="pause" id="pause-button">Pause</button>
       <p class="score-title">Score</p>
       <div id="score-board" class="score-board">0</div>

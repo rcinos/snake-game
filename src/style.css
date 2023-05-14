@@ -46,17 +46,13 @@ body {
   padding: 2em 4em;
 }
 
-.before-start-wrapper.toggled {
+.hidden-after.toggled {
   display: none;
 }
 
 .before-start {
   display: flex;
   flex-direction: column;
-}
-
-.before-start.toggled {
-  display: none;
 }
 
 .before-start-text {
@@ -72,7 +68,7 @@ body {
   display: none;
 }
 
-.difficulty-level.toggled {
+.hidden-before.toggled {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,9 +94,6 @@ body {
 
 .wrapper.toggled {
   margin-top: var(--top-indent);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .pause {
